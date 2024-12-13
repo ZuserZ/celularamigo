@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+
+
+        <nav class="navbar fixed-top sticky-top navbar-expand-lg">
+
+          <div class="container-fluid">
+
+            <a class="navbar-brand" href="{% url 'findex'%}">Celular Amigo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                {% if request.session.cliente_nome %}
+              <ul class="navbar-nav me-5">
+
+                  <li class="nav-item">
+                    <a href="{% url 'ftelacli'%}" class="nav-link"><span class="navbar-text" style="color: white;
+    color: white; /* Cor do texto */
+    text-shadow:
+      0 0 5px white, /* Brilho branco */
+      0 0 10px white,
+      0 0 15px white; /* Cor do brilho */
+    font-size: 15px;
+    /* padding-left: 10px; */">Bem-vindo, {{ request.session.cliente_nome }}!</span></a>
+                  </li>
+
+              </ul>
+                {% endif %}
+
+              <ul class="navbar-nav">
+                <li class="nav-item me-5">
+                  <a class="nav-link" aria-current="page" href="{% url 'exibir_carrinho'%}">Carrinho</a>
+                </li>
+              </ul>
+
+                {% if request.session.cliente_nome %}
+              <ul class="navbar-nav">
+                <li class="nav-item me-5">
+                  <a class="nav-link" aria-current="page" href="{% url 'exibir'%}">Dados Pessoais</a>
+                </li>
+              </ul>
+
+                {% endif %}
+
+              <ul class="navbar-nav">
+                <li class="nav-item me-5">
+                  <a class="nav-link" href="{% url 'fhistoria'%}">História</a>
+                </li>
+
+
+              </ul>
+              <ul class="navbar-nav">
+              <li class="nav-item dropdown me-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Produtos
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'exibir_celulares'%}">Celulares</a></li>
+                    <li><a class="dropdown-item" href="{% url 'exibir_capas'%}">Capinhas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'exibir_outros'%}">Acessórios</a></li>
+                  </ul>
+              </li>
+              </ul>
+                {% if request.session.cliente_nome %}
+
+              <ul class="navbar-nav">
+
+                <li class="nav-item" style="display: flex; align-items: center;">
+                  <a class="nav-link" href="{% url 'logout' %}">Sair<i class="fa-solid fa-arrow-right" style="color: #ffffff; padding: 7px;"></i></a>
+                </li>
+
+              </ul>
+
+              {% else %}
+
+              <ul class="navbar-nav">
+                <li class="nav-item" style="display: flex; align-items: center;">
+                  <a class="nav-link" href="{% url 'flogcliente'%}"><i class="fa-solid fa-user" style="color: #ffffff; padding: 7px;"></i>Entrar</a>
+                </li>
+              </ul>
+              {% endif %}
+
+            </div>
+
+          </div>
+
+        </nav>
+    </header>
+
+{% if messages %}
+        <div class="alert alert-danger" role="alert" id="messageModal" data-dismiss="modal">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        // Verifica se a mensagem existe
+        if ($('#messageModal').length) {
+            // Exibe a mensagem por 3 segundos e depois a oculta
+            setTimeout(function() {
+                $('#messageModal').fadeOut('slow');
+            }, 3000); // Tempo em milissegundos (3000ms = 3 segundos)
+        }
+    });
+</script>
+</html>

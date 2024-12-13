@@ -1,0 +1,174 @@
+/* Estilo geral da tabela */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaço entre as linhas */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 10px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); /* Sombras leves */
+    margin-top: 80px;
+}
+
+.table-dark th {
+    color: white; /* Cor escura no cabeçalho */
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000000, #434343); /* Gradiente preto */
+    border: none;
+    padding: 12px;
+    text-align: center;
+}
+
+.table-dark td {
+    background-color: #f9f9f9; /* Fundo branco suave */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    padding: 10px;
+    color: #434343; /* Cor escura para o texto nas células */
+}
+
+.table-dark tr:hover td {
+    background-color: #e6e6e6; /* Cinza claro no hover */
+    transition: 0.2s ease;
+    color: #434343;
+}
+
+/* Imagens do produto */
+.table-dark img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombras nas imagens */
+}
+
+/* Botões */
+.btn-outline-info, .btn-outline-danger, .btn-outline-secondary {
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-outline-info {
+    border: 1px solid #434343;
+    color: #434343;
+}
+
+.btn-outline-info:hover {
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+}
+
+.btn-outline-danger {
+    border: 1px solid #434343;
+    color: #434343;
+}
+
+.btn-outline-danger:hover {
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+}
+
+.btn-outline-secondary {
+    border: 1px solid #434343;
+    color: #434343;
+}
+
+.btn-outline-secondary:hover {
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+}
+
+/* Controle de quantidade */
+.d-flex.align-items-center button {
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.d-flex.align-items-center button:hover {
+    background: #434343;
+    transform: scale(1.1); /* Efeito de zoom no hover */
+}
+
+/* Carrinho vazio */
+.text-muted.py-3 i {
+    font-size: 2.5rem;
+    color: #434343;
+}
+
+.text-muted.py-3 {
+    font-size: 1rem;
+    color: #434343;
+    font-weight: bold;
+}
+
+/* Tabela Responsiva */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem;
+    }
+    .table-dark img {
+        width: 60px;
+    }
+}
+
+/* Input de quantidade */
+input[type="number"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    width: 60px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #434343;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Total da compra */
+h4.text-end {
+    font-weight: bold;
+    color: #434343;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+
+/* Botão de finalizar compra */
+
+
+.finalizar {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    border: 1px solid #434343;
+    background: linear-gradient(90deg, #000000, #434343); /* Gradiente no fundo */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: 0.3s ease-in-out; /* Efeito suave de transição */
+    display: inline-block; /* Para alinhar como um botão */
+    text-align: center; /* Centralizar o texto */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+.finalizar:hover {
+    background: #434343; /* Cor sólida no hover */
+    color: #e6e6e6; /* Cor clara no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+}

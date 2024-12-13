@@ -1,0 +1,153 @@
+body{
+
+  padding-top: 85px !important;
+  background-color: white;
+    /* background: url(../images/background.jpg); */
+  position: relative;
+  margin: 0;
+   /*Altura da tela*/
+
+}
+
+
+
+/*NAVBAR*/
+
+
+.navbar{
+
+  position: fixed;
+  background: linear-gradient(to right, #000000, #434343) !important;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+  height: 85px;
+  z-index: 10;
+
+}
+
+.nav-link{
+
+    color: white;
+
+}
+
+
+.nav-item li{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-collapse{
+
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    color: var(--white); /* Cor do texto */
+    text-shadow:
+      0 0 5px var(--black), /* Brilho branco */
+      0 0 10px var(--black),
+      0 0 15px var(--black); /* Cor do brilho */
+
+}
+
+.navbar-collapse a{
+
+  transition: 0.3s;
+
+}
+
+.navbar-collapse a:hover{
+
+    color: white;
+    transform: scale(1.08);
+    /* transition: 0.3s; */
+    color: white; /* Cor do texto */
+    text-shadow:
+      0 0 5px white, /* Brilho branco */
+      0 0 10px white,
+      0 0 15px white; /* Cor do brilho */
+
+}
+
+.navbar-collapse a:not(:hover){
+
+  transition-delay: 0.3s; /* Atraso ao sair do hover */
+
+}
+
+.navbar-brand{
+
+    color: white;
+    color: white;
+    text-shadow:
+      0 0 5px white,
+      0 0 10px white,
+      0 0 15px white;
+    font-size: 30px;
+
+}
+
+.navbar-brand:hover{
+
+    color: white;
+    color: white;
+    transition: 0.3s;
+    text-shadow:
+      0 0 5px white,
+      0 0 10px white,
+      0 0 15px white;
+
+
+}
+
+.navbar-toggler{
+
+    background-color: var(--black);
+    /* border-color: var(--green); */
+    border-color: var(--green); /* Cor do texto */
+    text-shadow:
+      0 0 5px var(--green), /* Brilho branco */
+      0 0 10px var(--green),
+      0 0 15px var(--green); /* Cor do brilho */
+
+
+}
+
+
+/*DROPDOWN*/
+
+
+.dropdown{
+
+    color: black;
+
+}
+
+
+.dropdown-item{
+
+    color: black;
+    font-size: 20px;
+
+
+
+
+}.dropdown-item:hover{
+
+    color: white;
+    transition: 0.3s;
+    transform: scale(1.001) !important;
+    text-shadow:
+      0 0 5px black,
+      0 0 10px black,
+      0 0 15px black !important;
+    background-color: white;
+
+
+
+}
+/*FIM DO DROPDOWN*/
+
+/*FIM DA NAVBAR*/
